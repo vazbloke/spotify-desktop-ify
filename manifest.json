@@ -1,0 +1,15 @@
+{
+  "name": "spotify-desktop-masterrace",
+  "description": "Open spotify URIs/web player links in the desktop app every time",
+  "version": "1.0",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "*://open.spotify.com/*",
+    "*://play.spotify.com/*"
+  ]
+}
