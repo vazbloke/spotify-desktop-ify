@@ -9,7 +9,7 @@
   "permissions": [
     "webRequest",
     "webRequestBlocking",
-    "*://open.spotify.com/*",
-    "*://play.spotify.com/*"
+    "https://open.spotify.com/*",
+    "https://play.spotify.com/*"
   ]
 }

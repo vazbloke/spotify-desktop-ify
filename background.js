@@ -8,7 +8,7 @@ chrome.webRequest.onBeforeRequest.addListener(
     return fullMatch ? { redirectUrl: `spotify:${type}:${identifier}` } : null;
   },
   {
-    urls: ['*://open.spotify.com/*', '*://play.spotify.com/*'],
+    urls: ['https://open.spotify.com/*', 'https://play.spotify.com/*'],
     types: ['xmlhttprequest'],
   },
   ['blocking']
