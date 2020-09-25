@@ -1,23 +1,15 @@
 chrome.webRequest.onBeforeRequest.addListener(
   ({ url }) => {
-    const [fullURL, type, URI] = url.match(
-      /[\/\&](track|playlist|album|artist)\/([^\&\#\/\?]+)/i
-    );
+    const [fullMatch, type, identifier] =
+      url.match(
+        /spotify\.com\/(track|album|artist|playlist|concert|episode|show)\/([^\&\#\/\?]+)/i
+      ) || [];
 
-    return { redirectUrl: `spotify:${type}:${URI}` };
+    return fullMatch ? { redirectUrl: `spotify:${type}:${identifier}` } : null;
   },
   {
     urls: ['*://open.spotify.com/*', '*://play.spotify.com/*'],
-    types: [
-      'main_frame',
-      'sub_frame',
-      'stylesheet',
-      'script',
-      'image',
-      'object',
-      'xmlhttprequest',
-      'other',
-    ],
+    types: ['xmlhttprequest'],
   },
   ['blocking']
 );
