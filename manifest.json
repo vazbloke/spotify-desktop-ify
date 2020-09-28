@@ -1,7 +1,7 @@
 {
-  "name": "spotify-desktop-masterrace",
-  "description": "Open spotify URIs/web player links in the desktop app every time",
-  "version": "1.0",
+  "name": "Spotify Desktop-ify",
+  "description": "Open Spotify URIs/web player links in the desktop app every time",
+  "version": "1.1.2",
   "manifest_version": 2,
   "background": {
     "scripts": ["background.js"]
@@ -9,7 +9,11 @@
   "permissions": [
     "webRequest",
     "webRequestBlocking",
-    "https://open.spotify.com/*",
-    "https://play.spotify.com/*"
-  ]
+    "https://open.spotify.com/*"
+  ],
+  "icons": {
+    "16": "sd-ify-16.png",
+    "48": "sd-ify-48.png",
+    "128": "sd-ify-128.png"
+  }
 }
