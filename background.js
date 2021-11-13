@@ -9,7 +9,14 @@ chrome.webRequest.onBeforeRequest.addListener(
   },
   {
     urls: ["https://open.spotify.com/*"],
-    types: ["xmlhttprequest"],
+    types: [
+      "main_frame",
+      "sub_frame",
+      "script",
+      "object",
+      "xmlhttprequest",
+      "other",
+    ],
   },
   ["blocking"]
 );
