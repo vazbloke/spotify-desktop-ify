@@ -18,6 +18,7 @@ This redirects Spotify content links to the Desktop app. [Click here](https://op
 - Strips tracking ID in the link - for better privacy
 
 Open source at https://github.com/vazbloke/spotify-desktop-ify
+
 Feel free to open an issue if something doesn't work as expected
 
 
